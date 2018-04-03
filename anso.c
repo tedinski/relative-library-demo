@@ -1,5 +1,6 @@
 #define _GNU_SOURCE
 #include <dlfcn.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,7 +12,6 @@ const char *where_is(void *ptr)
   Dl_info info;
   int ret;
   
-  // If we just wanted to find ourselves we can just call 
   ret = dladdr(ptr, &info);
   
   if (ret == 0) {
