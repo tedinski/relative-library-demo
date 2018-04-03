@@ -50,6 +50,7 @@ As a result, I also build the executable using `rpath` so it searches next to th
 As we can see from the output, the linux dynamic linker is unhelpful in telling us the full path to the executable, but at least it is helpful when `$ORIGIN` is involved.
 This makes it fit for the purpose of letting _libraries_ find their files.
 (N.B. if using `LD_LIBRARY_PATH` with a relative path instead of `-rpath $ORIGIN`, you will once again get that relative path echoed back at you, much as linux does for the executable itself.)
+It'd be nice if this worked for executables too, but oh well.
 
 ## License
 
